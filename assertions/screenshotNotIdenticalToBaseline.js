@@ -21,7 +21,7 @@ const compareWithBaseline = require('../lib/compare-with-baseline')
  * @param {NightwatchVRTOptions} settings Optional settings to override the defaults and `visual_regression_settings`
  * @param {String} message Optional message for `nightwatch` to log upon completion
  */
-exports.assertion = function screenshotIdenticalToBaseline(
+exports.assertion = function screenshotNotIdenticalToBaseline(
     elementId,
     fileName = elementId,
     settings,

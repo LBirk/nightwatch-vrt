@@ -65,9 +65,26 @@ declare module "nightwatch" {
         *
          * @link
          * @param {string} selector Identifies the element that will be captured in the screenshot.
-         * @param {function} callback Callback function which is called with the captured screenshot as an argument.
+         * @param {function} Optional callback Callback function which is called with the captured screenshot as an argument.
          * @returns {Object} The captured screenshot. This object is a Jimp (library) image instance.
          */
         captureElementScreenshot: (elementId: string, callback?: (arg?: any) => void) => this
+
+        /**
+         * Creates a new baseline screenshot of an element.
+         * The baseline screenshot will be saved in the baseline directory passed in
+         * the settings here, or the directory specified in the nightwatch configuration
+         * (under test_settings/visual_regression), or in a default generated path; in
+         * that order.
+         *
+         * @link
+         * @param {string} id ID of the element to route the command to.
+         * @param {String} Optional file name for this screenshot; defaults to the selector
+         * @param {NightwatchVRTOptions} Optional settings to override the defaults and `visual_regression_settings`
+         * @param {function} Optional callback function which is called with the captured screenshot as an argument.
+         * @returns {Object} The captured screenshot. This object is a Jimp (library) image instance.
+         */
+        createBaselineElementScreenshot: (elementId: string, fileName?: string, options?: NightwatchVRTSettings, callback?: (arg?: any) => void) => this
+
     }
 }

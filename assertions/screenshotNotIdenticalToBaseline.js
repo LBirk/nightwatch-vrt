@@ -56,7 +56,7 @@ exports.assertion = function screenshotNotIdenticalToBaseline(
                 })
             })
             .perform((done) => {
-                callback(!comparisonResult)
+                callback(comparisonResult)
                 done()
             })
 

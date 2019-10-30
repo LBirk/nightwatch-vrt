@@ -81,7 +81,6 @@ module.exports = {
                 "waitForConditionTimeout": 5000
             },
             "desiredCapabilities": {
-                "platform": "LINUX",
                 "version": "latest",
                 "browserName": "phantomjs"
             }
@@ -101,7 +100,7 @@ module.exports = {
                 "javascriptEnabled": true,
                 "acceptSslCerts": true,
                 "chromeOptions": {
-                    "args": ["--start-fullscreen"]
+                    "args": []
                 }
             }
         },

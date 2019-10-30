@@ -51,7 +51,7 @@ exports.assertion = function screenshotNotIdenticalToBaseline(
             })
             .perform((done) => {
                 compareWithBaseline(this.api, screenshot, fileName, settings).then((result) => {
-                    comparisonResult = result
+                    comparisonResult = !(typeof result === 'boolean' && result);
                     done()
                 })
             })
